@@ -1,0 +1,15 @@
+<template name="layout">
+  <header>
+    {{> nav }}
+  </header>
+
+  {{#if currentUser}}
+    {{> yield}}
+  {{else}}
+  <div class="container">
+    <h1 class="text-center">Please login to get started.</h1>
+  </div>
+  {{/if}}
+
+</template>
+
